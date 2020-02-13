@@ -9,5 +9,5 @@ def function(n):
     return(pro)
     
 
-n=int(input())
+n=int(input("enter the number:"))
 print(function(n))
