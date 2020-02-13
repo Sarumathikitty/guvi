@@ -1,0 +1,15 @@
+#print sum of all odd numbers using functions
+
+def function(x,y):
+    sum=0
+    while(x<=y):
+        if(x%2!=0):
+            sum+=x
+        x+=1
+    return sum
+    
+
+
+n=int(input())
+i=1
+print(function(i,n))
