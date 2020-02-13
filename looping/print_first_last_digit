@@ -1,0 +1,13 @@
+#To print last and first digit of number
+
+def functionfirst(n) : 
+    while (n>=10):  
+        n/= 10; 
+    return int(n) 
+  
+def functionlast(n) :
+    return (n % 10) 
+ 
+n = int(input("enter the num:")) 
+print(functionfirst(n))  
+print(functionlast(n))
