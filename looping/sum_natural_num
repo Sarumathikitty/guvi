@@ -1,0 +1,14 @@
+#print sum of all natural numbers
+
+def function(x,y):
+    sum=0
+    while(x<=y):
+        sum+=x
+        x+=1
+    return sum
+    
+
+
+n=int(input("enter the number:"))
+i=1
+print(function(i,n))
