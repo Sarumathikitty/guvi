@@ -1,0 +1,12 @@
+#To write a program to print count of given digits using function
+
+def function(x):
+    count=0
+    while(x!=0):
+        count+=1
+        x=x//10
+    return(count)
+    
+
+n=int(input("enter the number:"))
+print(function(n))
