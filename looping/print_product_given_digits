@@ -1,0 +1,13 @@
+#Write a program to print product of given digits
+
+def function(n):
+    pro=1
+    while(n>0):
+        rem=n%10
+        pro*=rem
+        n//=10
+    return(pro)
+    
+
+n=int(input())
+print(function(n))
