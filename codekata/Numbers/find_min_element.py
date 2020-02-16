@@ -1,0 +1,5 @@
+#find minimum element
+
+n=int(input())
+num=list(map(int,input().split()))
+print(min(num))
