@@ -1,0 +1,8 @@
+#print sum of all odd numbers within range
+
+N,M=map(int,input().split())
+sum=0
+for i in range(N,M+1):
+	if(i%2!=0):
+		sum=sum+i
+print(sum)
