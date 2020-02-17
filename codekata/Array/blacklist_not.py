@@ -14,3 +14,4 @@ c=function(n,s)
 if(c>25):
 	print("Not Blacklisted")
 else:
+	print("Not Blacklisted"
