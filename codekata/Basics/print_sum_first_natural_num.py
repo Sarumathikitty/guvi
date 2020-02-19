@@ -1,13 +1,8 @@
-//print sum of first natural numbers
-#include<stdio.h>
-int main()
-{
-  int i,num,sum=0;
-  scanf("%d",&num);
-  for(i=1;i<=num;i++)
-  {
-    sum=sum+i;
-  }
-  printf("%d",sum);
-return 0;
-}  
+#print sum of first natural numbers
+
+n=int(input())
+sum=0
+for i in range(1,n+1):
+    sum=sum+i
+print(sum)
+ 
