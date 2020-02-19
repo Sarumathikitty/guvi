@@ -1,15 +1,8 @@
-//To find A^B
+#Given numbers A,B find A power of B
 
-#include<stdio.h>
-#include<math.h>
-int main(void)
-{
-  int n,k,pro,i;
-  scanf("%d %d",&n,&k);
-  for(i=1;i<=k;i++)
-    {
-      pro=pow(n,i);
-    }
-	printf("%d",pro);
-	return 0;
-}
+A,B=map(int,input().split())
+res=A**B
+print(res)
+ 
+    
+
