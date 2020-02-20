@@ -5,26 +5,23 @@ definedpassword="1234"
 userbalance=5000
 hashdefinedpassword=hash(definedpassword)
 hashedusername=hash(username)
-#print(hashdefinedpassword)
 j=0
 N=1000
 while(j<N):
     runtimeusername=input("enter the username:")
     hashedruntimeuser=hash(runtimeusername)
+    print(j)
     if(hashedruntimeuser==hashedusername):
         break
        
-j=j+1
+    j=j+1
 i=0
 while(i<5):
-    #runtimeusername=input("enter the username:")
     runtimepassword=input("enter the password:")
-    #hashedruntimeuser=hash(runtimeusername)
     hashedruntimepassword=hash(runtimepassword)
-    #print(hashedruntimepassword)
     if(hashedusername== hashedruntimeuser):
         if(hashdefinedpassword==hashedruntimepassword):
-            print("logined successfully")
+            print("ok valid")
             N=1000
             c=0
             while(i<=N):
@@ -47,9 +44,7 @@ while(i<5):
                         print(requestingcash,"accessed")
                         print("userbalance",userbalance)
                         print("thank you for ur service")
-                   
-                #else:
-                    #print("do u want to continue servies yes or no")
+            
                    
                    
                
