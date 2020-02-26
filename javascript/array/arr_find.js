@@ -3,3 +3,6 @@ var foundcountry = dummy.find((country) => {
 return country.name === 'India'
 })
 console.log(foundcountry);
+
+
+
