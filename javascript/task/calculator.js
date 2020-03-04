@@ -1,3 +1,21 @@
+<html>
+<head>
+<script>
+function insert(num){
+document.form.textview.value=document.form.textview.value+num
+document.form.textview.value1=document.form.textview.value-num
+document.form.textview.value2=document.form.textview.value*num
+document.form.textview.value3=document.form.textview.value/num
+}
+function equal(){
+var add=document.form.textview.value;
+var sub=document.form.textview.value1;
+var mul=document.form.textview.value2;
+var div=document.form.textview.value3;
+if(add){
+document.form.textview.value=eval(add)
+}
+else if(sub){
 
 
 document.form.textview.value1=eval(sub)
@@ -44,3 +62,13 @@ document.form.textview.value="";
 <td><input class="button" type="button"value="3" onclick="insert(3)"></td>
 <td><input class="button" type="button"value="=" onclick="equal()"></td>
 </tr>
+<tr>
+<td><input class="button" type="button"value="." onclick="insert('.')"></td>
+</tr>
+</div>
+</body>
+</html>
+
+
+
+
