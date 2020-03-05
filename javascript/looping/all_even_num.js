@@ -8,4 +8,4 @@ for(i=1;i<=n;i++)
         console.log(i);
     }
 }
-© 2020 GitHub, Inc.
+
