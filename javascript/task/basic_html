@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<label>Name:</label>
+<input type="text"/><br><br>
+<label>Email:</label>
+<input type="text"/><br><br>
+<label>Password</label>
+<input type="password"/><br><br>
+<p><label>Qualification</label></p>
+<input type="checkbox" name="a" id="a"/>
+<label >B.tech</label>
+<input type="checkbox" name="a" id="b"/>
+<label >Bsc</label>
+<p><label>Gender</label></p>
+<input type="radio" name="b" id="b"/>
+<label >male</label>
+<input type="radio" name="b"id="c"/>
+<label >female</label>
+
+</body>
+</html>
