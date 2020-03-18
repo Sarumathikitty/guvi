@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <html>
 <title>www.grocery.com</title>
 <head>
@@ -74,14 +73,47 @@ border-color:pink;
 <br><br><br>
 <div class="design" id="a2">
 <h2><center><font color="steelblue">Grocery Items</center></font></h2><br>
-<p id="res" class="text-line"></p>
-<button class="click" id="b2" >Clear items</button>
+<br>
+</div>
+
+
 <br>
 </div>
 <script>
+  var div=document.createElement("div");
+
+document.getElementById("a2").appendChild(div);
+div.style.position="relative";
+div.style.left="225px";
+var but=document.createElement("button");
+document.getElementById("a2").appendChild(but);
+but.innerHTML="Clear items";
+but.style.position="relative";
+but.style.left="225px";
+but.style.width="155px";
+but.onclick=function()
+{
+  clear()
+}
 function myfunc(){
-  var x=document.getElementById("inpfield").value;
-  document.getElementById("res").innerHTML=x;
+  var p=document.createElement("p");
+  div.appendChild(p);
+  var b1=document.createElement("button");
+  b1.innerHTML="delete";
+  b1.onclick=function(){
+    del()
+  }
+  div.appendChild(b1);
+  p.innerHTML=document.getElementById("inpfield").value;
+  document.getElementById("inpfield").value="";
+
+function del(){
+  p.remove();
+  b1.remove();
+}
+}
+function clear(){
+  div.innerHTML="";
 }
 </script>
 </body>
