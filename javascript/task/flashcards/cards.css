@@ -1,4 +1,4 @@
-#s1
+#a1
 {
 position: relative;
 left:25px;
@@ -8,7 +8,7 @@ background: white;
 border-style:solid;
 border-color: #ff9900;
 }
-#s2
+#a2
 {
 position: relative;
 left:25px;
@@ -40,23 +40,4 @@ background: white;
 border-style:solid;
 border-color: #ff9900;
 }
-#del
-{
-background-color: blue;
-position:relative;
-top:22px;
-left:45px;
-}
-#edi
-{
-background-color: blue;
-position:relative;
-top:22px;
-}
-#next{
-border-color: green;
-width: 22%;
-height:22px;
-position: relative;
-left:145px;
-}
+
