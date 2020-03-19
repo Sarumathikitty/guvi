@@ -1,120 +1,121 @@
 <html>
 <title>www.grocery.com</title>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body{
-   background-color:grey;
+    body
+    {
+        background-color: gray;
+    }
+    .full {
+  width: 70%;
+  padding:200px;
+  height: 70%;
 }
-
-#a1
-{  
-    background-color:steelblue;
+p.b { 
+  word-spacing: 30px;
 }
-#inpfield
- 
- {
-    background-color:steelblue;
-}
-#a2
-{ 
-  background-color:lavender;
-}
-#b1
+#div1
 {
- border-color:ghostwhite;
+background-color:#4682B4;
+margin-top:40px;
+border:3px solid black;
+border-radius:7px;
+box-sizing:border-box;
+width: 70%;
+padding: 20px;
 }
-#b2
+#inputId{
+    background-color:#4682B4;
+    border:3px solid #4682B4;
+    outline-style:none;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+#div2{
+    background-color:whitesmoke; 
+    border: 3px solid black;
+     border-radius:7px;
+     box-sizing:border-box; 
+     width: 70%;
+     padding: 20px;
+}
+#delete
 {
- border-color:steelblue;
+    position:absolute;
+    right:25%;
+    top:79%;
+    display:none"
 }
-.click{
- text_align:center;
-display:block;
- width:500px;
- margin-left:8%;
-padding:2px;
- }
-.design{
-  border-radius:5px solid black;
-  position:relative;
-  top:100px;
-  left:30%;
-  width:600px;
-  padding:2px;
-  border:1px solid black;
-  margin:0;
+#dele{
+    color:black;
+    width:700px;
+    height:28px;
+    border-radius:7px;
+    box-sizing:border-box;
+    border:3px solid #4682B4;
 }
-
-.text-line
-{
-color:solid black;
-outline:none;
-outline-style:none;
-border-top:none;
-border-left:none;
-border-right:none;
-margin-left:9%;
-padding:3px 165px;
-background color: #0000FF;
-border-color:pink;
-}
+#d{
+      width: 15px;
+    height: 13px;
+    }
+    #submit{
+        color:white;
+        border: 3px solid white;
+        background-color:#4682B4;
+         width:700px;
+         height:28px;
+         border-radius:7px;
+         box-sizing:border-box;
+    }
 </style>
 </head>
 <body>
+    <div align="center">
+ <div id="div1">
+ <h3><center><font color="white">Add Grocery Items</font></center></h3><br><br>
+ <input type="text" id="inputId" >
+ <hr><br>
+ <div ><center><input type="button" onclick="myfunc()" value="Submit Here" id="submit" ></center></div>
+ </div><br><br><br>
+ <div id="div2">
+ <h3><center><font color="#4682B4">Grocery Items</font></center></h3><br><br><br><br><br>
+  <table id="g">
+     <tbody>
+         <tr></tr>
+     </tbody>
+ </table>
+ 
 
-<div class="design" id="a1">
-<h2><center><font color="lavender">Add Grocery Items</center></font></h2><br>
-<input type="text" id="inpfield" class="text-line"/><br><br>
-<button class="click" id="b1" onclick="myfunc()">Submit Here</button>
-<br>
+<div ><center><input type="button" id="dele" onclick="mydel()" value="Clear Items" ></center></div>
 </div>
-<br><br><br>
-<div class="design" id="a2">
-<h2><center><font color="steelblue">Grocery Items</center></font></h2><br>
-<br>
 </div>
-
-
-<br>
-</div>
+ </div>
+</body>
 <script>
-  var div=document.createElement("div");
-
-document.getElementById("a2").appendChild(div);
-div.style.position="relative";
-div.style.left="225px";
-var but=document.createElement("button");
-document.getElementById("a2").appendChild(but);
-but.innerHTML="Clear items";
-but.style.position="relative";
-but.style.left="225px";
-but.style.width="155px";
-but.onclick=function()
-{
-  clear()
-}
-function myfunc(){
-  var p=document.createElement("p");
-  div.appendChild(p);
-  var b1=document.createElement("button");
-  b1.innerHTML="delete";
-  b1.onclick=function(){
-    del()
-  }
-  div.appendChild(b1);
-  p.innerHTML=document.getElementById("inpfield").value;
-  document.getElementById("inpfield").value="";
-
-function del(){
-  p.remove();
-  b1.remove();
-}
-}
-function clear(){
-  div.innerHTML="";
+    function myfunc(){
+        console.log("hi");
+var table=document.getElementById("g").getElementsByTagName('tbody')[0];
+console.log("k");
+var newRow=table.insertRow(1);
+console.log("h");
+cell1=newRow.insertCell(0);
+cell1.innerHTML=document.getElementById("inputId").value;
+cell2=newRow.insertCell(1);
+cell2.innerHTML='<a onclick="d(this)"><img  src="dbin.png" id="d" alt="W3" src="logo"></img></a>';
+document.getElementById("inputId").value=" ";
+document.getElementById("dele").style.display="";
+    } 
+function mydel(){
+    
+    document.getElementById("g").remove();
+    }
+    function d(td) {
+    console.log("delete");
+    var r=td.parentElement.parentElement.rowIndex;
+    console.log("row after");
+    document.getElementById("g").deleteRow(r);
 }
 </script>
-</body>
 </html>
