@@ -1,26 +1,14 @@
-const readline=require('readline');
-const inp=readline.createInterface({
-    input:process.stdin
-});
-const number=[];
-inp.on('line',(data)=>{
-    number.push(data);
- });
-var a=[],d,c=[],result,sum=0;
-inp.on('close',()=>{
-    a=number[0].split(" ");
-function filter()
-{
- for(var i=0;i<a.length;i++)
- { 
-     if(a[i].length>7)
-  {
-    var answer=a[i];
-    c.push(answer);
- }
- }
- return d=c.join(" ");
- }
-result=filter();
-console.log(result);
-});
+const filter=(arr,callback)=>{
+    var s=[]
+    for(var i=0;i<arr.length;i++)
+    {
+        if(callback(arr[i]))
+        {
+            s.push(arr[i])
+        }
+    }
+    return s
+}
+var tofilter=(x)=>x>=5;
+var a=[3,4,2,5,8,9]
+console.log(filter(a,tofilter))
