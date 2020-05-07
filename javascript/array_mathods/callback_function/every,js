@@ -2,7 +2,7 @@ const everyfunc=(arr,callback)=>{
   var  s=[];
   for(var i=0;i<arr.length;i++)
     {
-      if(call(arr[i]))
+      if(callback(arr[i]))
         {
           s.push(arr[i]);
         }
