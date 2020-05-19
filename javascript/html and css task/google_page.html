@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>google search results page</title>
+   
+<style>
+body {
+    min-height: 100%;
+    position: relative;
+}
+
+#topbar {
+    display: flex;
+    height: 64px;
+    width: 100%;
+    align-items: flex-end;
+    position: fixed;
+    background-color: white;
+}
+
+#searchbarimage {
+    height: 30px;
+    padding: 0px 28px 10px 30px;
+    cursor: pointer;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+
+
+#searchbarbutton {
+    height: 45px;
+    width: 55px;
+    position: relative;
+    margin-right: -2px;
+    background-color: white;
+}
+
+
+#searchbar {
+    width: 625px;
+    height: 45px;
+    border-radius: 100px;
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 16px;
+    position: relative;
+    bottom: 5px;
+    overflow: hidden;
+    display: flex;
+    z-index: 100;
+}
+
+#searchbar:hover {
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+#searchbar > input {
+    height: 45px;
+    border-style: none;
+    font-size: 16px;
+    line-height: 45px;
+    padding-left: 20px;
+    flex: 1;
+}
+
+#searchbar > input:focus {
+    outline: none;
+}
+
+#searchbar button {
+    border: none;
+    cursor: pointer;
+}
+
+#searchbar button:focus {
+    outline: none;
+}
+
+#boxesicon {
+    width: 25px;
+    height: 25px;
+    background-image: url('images/boxes.png');
+    opacity: 0.6;
+    background-size: 26px;
+    position: absolute;
+    right: 130px;
+    bottom: 14px;
+}
+
+#optionsmenu::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #4285F4;
+    left: 5px;
+    bottom: 0px;
+}
+
+#options2 {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 100px;
+}
+
+#options2 li {
+    padding: 0px 10px 15px 20px;
+}
+
+#searchresultsarea {
+    margin-left: 150px;
+    font-family: 'Arial';
+}
+
+#searchresultsnumber {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.searchresult {
+    margin-left: 8px;
+}
+
+.searchresult h2 {
+    font-size: 19px;
+    line-height: 18px;
+    font-weight: normal;
+    color: rgb(29, 1, 189);
+    margin-bottom: 0px;
+    margin-top: 25px;
+}
+
+.searchresult a {
+    font-size: 14px;
+    line-height: 14px;
+    color: green;
+    margin-bottom: 0px;
+}
+
+.searchresult button {
+    font-size: 10px;
+    line-height: 14px;
+    color: green;
+    margin-bottom: 0px;
+    padding: 0px;
+    border-width: 0px;
+    background-color: white;
+}
+
+#bellicon {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(105, 105, 105);
+    background-image: url('images/bell.png');
+    background-size: 12px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    position: absolute;
+    right: 90px;
+    bottom: 18px;
+}
+
+#profileimage {
+    border-radius: 50px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 40px;
+    bottom: 12px;
+}
+
+ 
+#optionsbar {
+    width: 100%;
+    height: 50px;
+    border-width: 0px;
+    border-bottom: 1px;
+    border-color: lightgray;
+    border-style: solid;
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Arial';
+    font-size: 13px;
+    color: rgb(112, 112, 112);
+    padding-top: 64px;
+}
+
+#options1 {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 150px;
+}
+
+#options1 li {
+    padding: 0px 10px 15px 20px;
+}
+
+#optionsmenu {
+    color: #4285F4;
+    font-weight: bold;
+    position: relative;
+    z-index: -1;
+}
+
+.searchresult p {
+    width: 625px;
+    font-size: 13px;
+    margin-top: 0px;
+    color: rgb(82, 82, 82);
+}
+
+table{
+width:70%;
+height: 25px;
+border:0.1px solid #DCDCDC;
+}
+#apps{
+width:1.5%;
+margin-left:420px;
+padding-bottom:20px;
+bottom: 14px;
+}
+
+</style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="topbar">
+            <img id="searchbarimage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS7q-r3ZtMw_ljYXK3XiJUqWV5K8t7HcfP138G57Y9vEsF4CsoR&usqp=CAU" style="width:7%"/>
+            <div id="searchbar" type="text">
+                <input id="searchbartext" type="text" value="google search results page" />
+               
+                <button id="searchbarbutton">
+                  <img src="https://cdn1.iconfinder.com/data/icons/color-bold-style/21/01-512.png" style="width:50%">
+                </button>
+            </div>
+
+            <div id="boxesicon"></div>
+            <div id="bellicon"></div>
+<img id="apps" src="https://image.flaticon.com/icons/png/512/60/60991.png" />
+            <img id="profileimage" src="https://qph.fs.quoracdn.net/main-qimg-cb92bb32d2eb2e6b6e6e857617b4a3b7" />
+        </div>
+        <div id="optionsbar">
+            <ul id="options1">
+                <li id="optionsmenu">All</li>
+                <li>News</li>
+                <li>Videos</li>
+                <li>Images</li>
+                <li>Maps</li>
+                <li>More</li>
+            </ul>
+
+            <ul id="options2">
+                <li>Settings</li>
+                <li>Tools</li>
+            </ul>
+        </div>
+    </div>
+    <div id="searchresultsarea">
+        <p id="searchresultsnumber">About 866,000,000 results (0.77 seconds) </p>
+        <div class="searchresult">
+            <h2>Element of google Search Engine Results Page</h2>
+            <a>https://yoast.com>SEO blog> SEO Basics</a>
+            <p>If you <b>Google</b> something you'll end up on the <b>Google Search</b> Engine <b>Results Page.</b></br>What does this page show? Which elements do you see, ...</p>
+        </div>
+
+<div id="table">
+<table>
+<tr>
+<td style="color:#808080;font-size:20px;">People also ask</td>
+</tr>
+</table>
+<table>
+<tr>
+<td style="color:black;font-size:16px;">What is a Google search results page?<img style="padding-left: 490px" src="https://cdn.iconscout.com/icon/free/png-512/down-arrow-16-460295.png" height="20" width="20"> </td>
+</tr>
+        </table>
+        <table>
+<tr>
+<td style="color:black;font-size:16px;">What do Google search results mean?<img style="padding-left: 505px" src="https://cdn.iconscout.com/icon/free/png-512/down-arrow-16-460295.png" height="20" width="20">  </td>
+</tr>
+        </table>
+        <table>
+<tr>
+<td style="color:black;font-size:16px;">What is SERP SEO? <img style="padding-left: 625px" src="https://cdn.iconscout.com/icon/free/png-512/down-arrow-16-460295.png" height="20" width="20"> </td>
+</tr>
+        </table>
+        <table>
+<tr>
+<td style="color:black;font-size:16px;">What is Snippet in Google? <img style="padding-left:580px" src="https://cdn.iconscout.com/icon/free/png-512/down-arrow-16-460295.png" height="20" width="20"> </td>
+</tr>
+        </table>
+         </div>
+         <div class="searchresult">
+            <h2>Search engine results page - Wikipedia</h2>
+            <a>https://en.wikipedia.org/wiki/search_engine_results_page</a>
+            <p>Search Engine Results Pages (SERP) are the pages displayed by search engines in response.. Rich Snippets are displayed by <b> Google</b> in the search results pages when a website contains content in structured data markup. Structured Data...</p>
+        </div>
+
+        <div class="searchresult">
+            <h2>2018's Guide to Google's Search Engine Results Page(SERP)-Oberlo</h2>
+            <a>https://www.oberlo.com/blog</a>
+            <p>These new SERP features-SERP is shorthand for search engine results page - have improved the experience for users. but they're also....</p>
+        </div>
+
+        <div class="searchresult">
+            <h2>SERP: The 2018 Guide To Google Search Engine Results</h2>
+            <a>https://www.ignitevisiblity.com/serp/</a>
+            <p>SERP refers to search engine result page - the page that appears with a user's result when they type a search into Google(or any search...</p>
+        </div>
+    </div>
+</body>
+
+</html>
+
