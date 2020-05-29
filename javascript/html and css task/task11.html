@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+</style>
+<body>
+<script type="text/javascript">
+
+var div1=document.createElement("div");
+div1.style.height = "80px";
+div1.style.width = "200px";
+div1.style.backgroundColor="white";
+
+var div2=document.createElement("div");
+div2.style.height = "60px";
+div2.style.width = "600px";
+div2.style.backgroundColor="white";
+
+var box1=document.createElement("div");
+box1.style.height="60px";
+box1.style.width="200px";
+box1.style.backgroundColor="white";
+box1.style.marginTop="15px";
+box1.style.display="inline";
+box1.style.cssFloat="left";
+var img=document.createElement("IMG");
+img.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTGynNGFV_fBWYhGQFO0HFJe4gJKIyLTxvmQ5w0N_bl4iOf5JvM&usqp=CAU");
+img.style.height = "50px";
+img.style.width = "100px";
+img.style.display="inline";
+img.style.paddingLeft="10px";
+box1.appendChild(img);
+
+var text=document.createElement("input");
+text.setAttribute("type","text");
+text.style.width="45%";
+text.style.height="35px";
+text.style.position="absolute";
+text.style.top="25px";
+text.style.left="145px";
+text.setAttribute("placeholder","google search results page");
+text.style.textIndent="15px";
+text.style.fontSize="19px";
+div2.appendChild(box1);
+div2.appendChild(text);
+div1.appendChild(div2);
+document.body.appendChild(div1);
+
+var dmain=document.createElement("div");
+dmain.setAttribute("style","height:140px");
+dmain.style.width="100%";
+dmain.style.position="absolute";
+dmain.style.left="0px";
+document.body.appendChild(dmain);
+
+var d=document.createElement("div");
+var p=document.createElement("p");
+p.innerHTML="All &ensp; News &ensp; Videos &ensp; Images &ensp; Maps &ensp; More";
+var p1=document.createElement("p");
+p1.innerHTML="";
+d.appendChild(p);
+d.appendChild(p1);
+p.style.marginLeft="135px";
+d.style.clear="both";
+d.style.paddingLeft="35px";
+d.setAttribute("style","border-bottom:1px solid black");
+p.style.color="blue";
+document.body.appendChild(d);
+
+d1=document.createElement("div");
+d1.style.height="600px";
+d1.style.width="600px";
+d1.style.lineHeight="1";
+d1.style.marginLeft="130px";
+d1.style.clear="both";
+
+d1=document.createElement("div");
+d1.style.height="600px";
+d1.style.width="600px";
+d1.style.lineHeight="1";
+d1.style.marginLeft="130px";
+d1.style.clear="both";
+var p1=document.createElement("p");
+p1.innerHTML="About 866,000,000 results(0.77 seconds)";
+p1.style.fontSize="15px";
+p1.style.fontWeight="18px";
+p1.style.color="grey";
+p1.style.marginTop="0px";
+d1.appendChild(p1);
+
+var b1=document.createElement("h3");
+b1.innerHTML="Elements of Google Search Engine Results Page ";
+b1.style.color="rgb(29, 1, 189)";
+var b2=document.createElement("p");
+b2.innerHTML="https:/yoast.com> SEO blog >SEO basics";
+b2.style.color="green";
+b2.style.marginBottom="0px";
+var b3=document.createElement("p");
+b3.innerHTML="Feb 26,2018-If you <b>Google</b> something you'll end up on the<b> Google Search</b> Engine Result Page.What does this page show? Which elements do you see,...";
+b3.style.color="rgb(82, 82, 82)";
+b3.style.width="625px";
+d1.appendChild(b1);
+d1.appendChild(b2);
+d1.appendChild(b3);
+document.body.appendChild(d1);
+
+d2=document.createElement("div");
+var t=document.createElement("table");
+t.setAttribute("width","700");
+t.setAttribute("height","25");
+t.setAttribute("border","1px","solid");
+t.setAttribute("style","border-collapse:collapse");
+t.innerHTML="People also ask";
+t.style.color="grey";
+d2.appendChild(t);
+d1.appendChild(d2);
+
+var t1=document.createElement("table");
+t1.setAttribute("width","700");
+t1.setAttribute("height","30");
+t1.setAttribute("border","1px","solid");
+t1.setAttribute("style","border-collapse:collapse");
+t1.innerHTML="What is a Google search results page?";
+t1.style.color="black";
+d2.appendChild(t1);
+d1.appendChild(d2);
+
+var t2=document.createElement("table");
+t2.setAttribute("width","700");
+t2.setAttribute("height","30");
+t2.setAttribute("border","1px","solid");
+t2.setAttribute("style","border-collapse:collapse");
+t2.innerHTML="What do Google search results mean?";
+t2.style.color="black";
+d2.appendChild(t2);
+d1.appendChild(d2);
+
+var t3=document.createElement("table");
+t3.setAttribute("width","700");
+t3.setAttribute("height","30");
+t3.setAttribute("border","1px","solid");
+t3.setAttribute("style","border-collapse:collapse");
+t3.innerHTML="What is SERP SEO?";
+t3.style.color="black";
+d2.appendChild(t3);
+d1.appendChild(d2);
+
+var t4=document.createElement("table");
+t4.setAttribute("width","700");
+t4.setAttribute("height","25");
+t4.setAttribute("border","1px","solid");
+t4.setAttribute("style","border-collapse:collapse");
+t4.innerHTML="What is Snippet in Google? ";
+t4.style.color="black";
+d2.appendChild(t4);
+d1.appendChild(d2);
+
+var b5=document.createElement("h3");
+b5.innerHTML="Search engine results page - Wikipedia";
+b5.style.color="rgb(29, 1, 189)";
+var b6=document.createElement("p");
+b6.innerHTML="https://en.wikipedia.org/wiki/Search_engine_results_page";
+b6.style.color="green";
+var b7=document.createElement("p");
+b7.innerHTML="Search Engine Results Pages(SERP) are the pages displayed by search engines in response ....Rich snippts are displayed by Google in the search  results pages when a website contains content in structured data markup.Structured data...";
+b7.style.color="rgb(82, 82, 82)";
+d1.appendChild(b5);
+d1.appendChild(b6);
+d1.appendChild(b7);
+
+
+var b8=document.createElement("h3");
+b8.innerHTML="2018's Guide to Google's Search Engine Results Page(SERP)-Oberlo";
+b8.style.color="rgb(29, 1, 189)";
+var b9=document.createElement("p");
+b9.innerHTML="https://www.oberlo.com>Blog";
+b9.style.color="green";
+b9.style.marginTop="0px";
+var b10=document.createElement("p");
+b10.innerHTML="Jul 10,2018-These new SERP features-SERP is shorthand for search engine results page-have improved the experience for users,but they're also...";
+b10.style.color="rgb(82, 82, 82)";
+d1.appendChild(b8);
+d1.appendChild(b9);
+d1.appendChild(b10);
+
+var b11=document.createElement("h3");
+b11.innerHTML="SERP:The 2018 Guide To Google Search Engine Results";
+b11.style.color="rgb(29, 1, 189)";
+var b12=document.createElement("p");
+b12.innerHTML="https://ignitevisibility.com/serp/";
+b12.style.color="green";
+var b13=document.createElement("p");
+b13.innerHTML="May 1,2018-SERP refers to a search engine result page the page that appears with a user's results when they a search  into Google (or any Search..";
+b13.style.color="rgb(82, 82, 82)";
+d1.appendChild(b11);
+d1.appendChild(b12);
+d1.appendChild(b13);
+
+</script>
+</body>
+</html>
