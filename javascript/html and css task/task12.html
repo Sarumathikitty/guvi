@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<style>
+body
+{
+    background-color:#4d4dff;
+    font-family:sans-serif;
+    margin:40px ;  
+color:white;
+}
+</style>
+<body id ="body">
+<script>
+var b=document.getElementById("body");
+var d = document.createElement("div");
+var h1=document.createElement("h1");
+h1.innerHTML="Landing";
+h1.setAttribute("style","font-size:18px;");
+d.appendChild(h1);
+
+var ul=document.createElement("ul");
+ul.style.position="relative";
+ul.style.left="670px";
+var l1=document.createElement("li");
+l1.innerHTML="Home";
+var l2=document.createElement("li");
+l2.innerHTML="Features";
+var l3=document.createElement("li");
+l3.innerHTML="Reviews";
+var l4=document.createElement("li");
+l4.innerHTML="Pricing";
+var l5=document.createElement("li");
+l5.innerHTML="FAQ";
+var l6=document.createElement("li");
+l6.innerHTML="Get Started";
+l6.style.border="1px solid white";
+l1.style.display="inline-block";
+l1.style.margin="0 15px";
+l2.style.display="inline-block";
+l2.style.margin="0 15px";
+l3.style.display="inline-block";
+l3.style.margin="0 15px";
+l4.style.display="inline-block";
+l4.style.margin="0 15px";
+l5.style.display="inline-block";
+l5.style.margin="0 15px";
+l6.style.display="inline-block";
+l6.style.margin="0 15px";
+
+ul.appendChild(l1);
+ul.appendChild(l2);
+ul.appendChild(l3);
+ul.appendChild(l4);
+ul.appendChild(l5);
+ul.appendChild(l6);
+d.appendChild(ul);
+document.body.appendChild(d);
+var div=document.createElement("div");
+var dleft=document.createElement("div");
+var dright=document.createElement("div");
+dleft.style.position="absolute";
+dleft.style.width="50%";
+dleft.style.height="flex";
+dleft.style.left="10px";
+dright.style.position="absolute";
+dright.style.width="50%";
+dright.style.height="flex";
+dright.style.left="10px";
+
+var d1=document.createElement("div");
+d1.setAttribute("style","margin-left:50px");
+var head=document.createElement("p");
+head.innerHTML="Fly Makes you Faster";
+head.setAttribute("style","font-size:60px;");
+var p = document.createElement("p");
+p.innerHTML="New free template by uicookies.com. For more template visit the site. Lorem ipsum dolor sit amet consecteur adipisicing elit."
+p.setAttribute("style","font-size:20px;");
+var button=document.createElement("button");
+button.innerHTML="SEE PRICING";
+button.setAttribute("style","width: 40%;height: 40px;border-radius: 10px;background-color: green;position: relative;top: 10px;color:white");
+d1.appendChild(head);
+d1.appendChild(p);
+d1.appendChild(button);
+dleft.appendChild(d1);
+div.appendChild(dleft);
+
+var d2=document.createElement("div");
+d2.style.border="1px solid black";
+d2.setAttribute("style","background:white;padding-top:10px");
+
+var header=document.createElement("h1");
+header.innerHTML="Sign up for free";
+header.style.color="black";
+var form=document.createElement("form");
+form.setAttribute("style","background:white;max-width:400px;padding:10px;padding-bottom:10px;text-align:left;margin-right:100px;");
+var i1=document.createElement("input");
+i1.setAttribute("placeholder","Full Name");
+i1.setAttribute("style","font-family:sans-serif;background:#f2f2f2;width:80%;border:0;margin:0 0 15px ;padding:15px;font-size:14px;");
+
+var i2=document.createElement("input");
+i2.setAttribute("placeholder","Email");
+i2.setAttribute("style","font-family:sans-serif;background:#f2f2f2;width:80%;border:0;margin:0 0 15px;padding:15px;font-size:14px;");
+
+var i3=document.createElement("input");
+i3.setAttribute("placeholder","Email");
+i3.setAttribute("style","font-family:sans-serif;background:#f2f2f2;width:80%;border:0;margin:0 0 15px;padding:15px;font-size:14px;");
+
+var i4=document.createElement("input");
+i4.setAttribute("placeholder","Type");
+i4.setAttribute("style","font-family:sans-serif;background:#f2f2f2;width:80%;border:0;margin:0 0 15px;padding:15px;font-size:14px;");
+
+var submit=document.createElement("button");
+submit.innerHTML="Register";
+submit.setAttribute("style","font-family:sans-serif;background:blue;width:100%;border-radius:10px;padding:15px;color:white;font-size:14px;");
+
+d2.appendChild(header);
+form.appendChild(i1);
+form.appendChild(i2);
+form.appendChild(i3);
+form.appendChild(i4);
+form.appendChild(submit);
+d2.appendChild(form);
+dright.setAttribute("style","margin-left:60%;");
+dright.style.marginRight="80px";
+dright.appendChild(d2);
+div.appendChild(dright);
+document.body.appendChild(div);
+</script>
+</body>
+</html>
