@@ -1,7 +1,7 @@
 //1. Convert specifications given below in image to Javascript Object;
 
 //create new object technical specifications
-
+function newobj(){
 var technical specifications={
 dimensions:{
 "overall length":3500,
@@ -51,6 +51,9 @@ dimensions:{
 "cross vehicle weight":1320
 }
 }
+  console.log(technical specification.dimensions['overall length']);
+}
+newobj();
 
 
 
