@@ -6,10 +6,10 @@ var request=new XMLHttpRequest();
 request.open('GET','https://restcountries.eu/rest/v2/all',true)
 request.onload=function(){ 
    var jsondata=JSON.parse(this.response); 
-   for(vari=0; i<jsondata.length;i++)
+   for(var i=0; i<jsondata.length;i++)
 { 
-   console.log(jsondata[i].name+" shares its border with " +jsondata[i].borders.length +" countries that includes "+json[i].borders)
-               }
+   console.log(jsondata[i].name+" shares its border with " +jsondata[i].borders.length +" countries that includes "+jsondata[i].borders)
+ }
 
 }
 
