@@ -1,4 +1,4 @@
-//2. Print the dated of my accidents
+//1. Loop over the accidents array. Change atFaultForAccident from true to false.
 //create a object called mycar
 var myCar = {
  make: 'Bugatti',
