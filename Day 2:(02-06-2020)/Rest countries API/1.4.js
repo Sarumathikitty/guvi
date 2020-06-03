@@ -1,5 +1,5 @@
 //1.4 Display the count of all countries sharing their border with the country name in
-console.
+//console.
 
 var request=new XMLHttpRequest();
 
@@ -8,7 +8,7 @@ request.onload=function(){
    var jsondata=JSON.parse(this.response); 
    for(vari=0; i<jsondata.length;i++)
 { 
-   console.log(jsondata[i].name+" shares its border with " +jsondata[i].boders.length +" countries that includes "+json[i].borders)
+   console.log(jsondata[i].name+" shares its border with " +jsondata[i].borders.length +" countries that includes "+json[i].borders)
                }
 
 }
