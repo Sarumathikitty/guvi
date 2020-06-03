@@ -15,3 +15,16 @@ var myArray=function(odd)
         console.log(a)
 }
 myArray(10);
+
+
+
+//2.3Sum of all numbers in an array
+//create a function
+add=function(arr)
+{
+return arr.reduce((a,b)=>a+b,0);
+};
+var arr=[38,56,78,89];
+var sum=add(arr);
+//print sum of array
+console.log(sum)
