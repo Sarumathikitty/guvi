@@ -46,3 +46,17 @@ return true;
  console.log(primenumArray);
 }
 prime()
+
+//4.5 Return all the palindromes in an array 
+var str=["keek","nun","geek"]
+var palindrome = ()=>{
+var res=str.filter(function(p){
+var b=p.split('').reverse().join('')
+if(p==b)
+{
+return p;
+}
+})
+console.log(res)
+};
+palindrome()
