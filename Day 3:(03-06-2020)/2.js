@@ -17,6 +17,21 @@ var myArray=function(odd)
 myArray(10);
 
 
+//2.2. Convert all the strings to title caps in a string array
+var str=["guvi","geek"];
+var capital=function(str)
+{
+    var s=[];
+    for(i=0;i<str.length;i++)
+    {
+        var b=str[i];
+        var c=(b[0].toUpperCase()+b.slice(1));
+        s.push(c);
+    }
+console.log(s);
+}
+capital(str);
+
 
 //2.3Sum of all numbers in an array
 //create a function
@@ -44,4 +59,39 @@ return true;
  console.log(primenumArray);
 }
 prime()
+
+//2.5 Return of all the palindromes in an array
+var str=["keek","nun","geek"]
+var palindrome = function () {
+var res=str.filter(function(p){
+var b=p.split('').reverse().join('')
+if(p==b)
+{
+return p;
+}
+})
+console.log(res)
+};
+palindrome()
+
+
+//2.7 Removes duplicates from array
+var array=[34,56,34,78,32]
+var duplicate=function(arr){
+var result=[...new Set(array)];
+return result;
+}
+console.log(duplicate(arr));
+
+//2.8 Return an array by K times and return the rotated array
+var array=[34,56,38,29,19],k=3;
+var rev=function(array,k){
+for(var i=0;i<k;i++)
+{
+var t=array.shift();
+array.push(t)
+}
+return array
+}
+console.log(rev(array,k));
 
