@@ -15,20 +15,18 @@ function demo2(){
 demo(2,demo2)
 
 //3.2. if the given number is prime
-function demo(check)
-{
-    primenumArray = primenumArray.filter((number) => {
-for (var i = 2; i <= Math.sqrt(number); i++)
-{
-    check()
-if (number % i === 0) 
+function testPrime(num){
+if(num >= 2){
+for(var i = 2; i < num; i++){
+if(num % i === 0){
 return false;
 }
-return true
-});
 }
-function demo2(){
-    console.log("prime")
+return true;
+}else{
+return false;
 }
-var primenumArray=[2]
-demo(demo2)
+}
+
+console.log(testPrime(3));
+console.log(testPrime(20));
