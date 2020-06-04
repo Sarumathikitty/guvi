@@ -30,3 +30,33 @@ return false;
 
 console.log(testPrime(3));
 console.log(testPrime(20));
+
+
+//3.3. if the number is palindrome 
+function palindrome(number,check)
+{
+    var  temp=number
+   if(check(number)==temp)
+   {
+       return  "palindrome"
+   }
+   else
+   {
+       return "not palindrome"
+   }
+}
+function checkCondition(number)
+{
+ var a,num,b,temp=0;
+while(num>0)
+{
+a=num%10;
+num=parseInt(num/10);
+temp=temp*10+a;
+}	
+    return temp
+		
+}
+var res=palindrome(123,checkCondition);
+console.log(res)
+
