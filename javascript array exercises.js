@@ -32,12 +32,12 @@ let array = [[1, 2], 3, [4, 5]];
 flat(array); 
 
 //4.Creates a slice of array with n elements dropped from the beginning.
-function dropRight(array)
+function drop(array)
 {
     var arr=array.slice(1,3);
     console.log(arr);
 }
-dropRight([1, 2, 3]) 
+drop([1, 2, 3]) 
 
 //5 - dropRight
 //Creates a slice of array with n elements dropped from the end.
