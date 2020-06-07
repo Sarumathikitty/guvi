@@ -66,6 +66,10 @@ const arr = [[1,2],[3,[4,[5]]]];
 const flattened = arr.flattenDeep();
 console.log(flattened);
 
+//9 - flattenDepth
+//Recursively flatten array up to depth times.
+const arr = [1, [2, [3, [4]],  5]];
+arr.flat(2);
 
 //10 - fromPairs
 //this method returns an object composed from key-value pairs
