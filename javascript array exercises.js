@@ -32,13 +32,29 @@ let array = [[1, 2], 3, [4, 5]];
 flat(array); 
 
 //4.Creates a slice of array with n elements dropped from the beginning.
-const array = [2, 5, 9,6,7];
-const index = array.indexOf(5);
-if (index > -1) {
-  array.splice(index, 1);
+function dropRight(array)
+{
+    var arr=array.slice(1,3);
+    console.log(arr);
 }
-// array = [2, 9]
-console.log(array); 
+dropRight([1, 2, 3]) 
+
+//5 - dropRight
+//Creates a slice of array with n elements dropped from the end.
+function dropRight(array,n)
+{
+    var arr=array.slice(n);
+    console.log(arr);
+}
+dropRight([1, 2, 3],5)
+
+//6 - dropWhile
+//Creates a slice of array excluding elements dropped from the end
+const dropWhile = (arr, func) => {
+  while (arr.length > 0 && !func(arr[0])) arr = arr.slice(1);
+  return arr;
+};
+dropWhile([1, 2, 3, 4], n => n >= 3);
 
 //7.This method is like Array.prototype.findIndex except that it iterates over elements of collection from right to left.
 var arr = [1,2,3,4,5,6,6];
