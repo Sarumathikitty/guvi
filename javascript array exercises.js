@@ -62,14 +62,19 @@ var a=arr.lastIndexOf('4');
 console.log(a);
 
 //8.Recursively flattens array.
-const arr = [[1,2],[3,[4,[5]]]];
-const flattened = arr.flattenDeep();
-console.log(flattened);
+function flattenDeep(arr)
+{
+console.log(arr.flat(2));
+}
+flattenDeep([1, [2, [3, [4]],  5]]);
 
 //9 - flattenDepth
 //Recursively flatten array up to depth times.
-const arr = [1, [2, [3, [4]],  5]];
-arr.flat(2);
+function flattenDepth(array,n)
+{
+console.log(array.flat(n));
+}
+flattenDepth([1, [2, [3, [4]],  5]],2);
 
 //10 - fromPairs
 //this method returns an object composed from key-value pairs
