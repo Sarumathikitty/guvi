@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web page</title>
+    <meta charset="UTF-8" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script> 
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+ <style>
+#one{
+height:800px;
+width:1000px;
+background-color:grey;
+margin-left:100px;
+}
+#two
+{
+background-color:coral;
+height:200px;
+width:600px;
+}
+options1
+{
+font-family:sans-serif;
+padding:20px;
+color:white;
+flex-direction: row;
+}
+#three{
+background-color:white;
+height:600px;
+width:900px;
+margin-left:50px;
+position:absolute;
+top:100px;
+}
+#options2
+{
+font-family:sans-serif;
+margin-left:30px;
+}
+#four
+{
+font-family:sans-serif;
+margin-left:30px;
+}
+</style> 
+</head>
+  <body>
+    <div id="app"></div>
+    <script type="text/babel">
+      const rootElement = document.getElementById("app");
+      const element=<div id="one">
+       <div id="two">
+            <ul id="options1">
+                <li>PIXEL GEEK</li>                
+                <li>VIDEOS</li>
+                <li>RAMBLES</li>
+                <li>THE OVERFLOW</li>                
+            </ul>
+        <div id="three">
+       <h1 style={{color:"coral",marginLeft:"30px"}}>Rejection is hard</h1>      
+      <h6 style={{color:"grey",marginLeft:"30px"}}>FEBRUARY 12,2019</h6>
+      <p style={{fontFamily:"sans-serif",marginLeft:"30px"}}>We are taught rejection at an early age when we want to do
+         something or get something and our parents say "no".</p>
+      <p style={{fontFamily:"sans-serif",marginLeft:"30px"}}>Rejection also happens when:</p>
+      <ul id="options2">
+      <li >we are aiming for a certain grade in school and we don't get it.</li>
+      <li >you want a boyfriend or girlfriend and he/she says "no.i don't like you in that way".</li>
+      <li >you go through an interview process for a job and you don't get  the position.</li>
+      <li >when you work so hard to get a client and your proposal gets  rejected.</li>
+      </ul>
+     <div id="four">
+      <p >At the root of it all,we all want something so bad and when life says</p>
+      <p >no,you can't have it ,we get mad and either take it out on someone</p>
+      <p > else,something else or worse,ourselves.</p>
+      <p >Rejection is part of life and its ok to be rejected</p>      
+      </div>
+      </div>
+      </div>
+      </div>          
+     ReactDOM.render(element, rootElement);
+    </script>
+  </body>
+</html>
