@@ -1,50 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>React </title>
     <meta charset="UTF-8" />
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
-
   <body>
-    <div id="app"></div>
+      <div id="root"></div>
 
-    <script type="text/babel">
-      const rootElement = document.getElementById("app");
-
-      const Count=({value})=>{
-      return <p>{value}</p>;
-    };
-    const CounterApp=()=>{
-    const [number,setNumber]=React.useState(0);
-
-    const increment=()=>{
-    setNumber(number+1);
-  };
-   const decrement=()=>{
-    setNumber(number-1);
-  };
-  return(
-  <div>
-    <div>
-    <Count value={number}/>
-    <button onClick={increment}>Increment</button>
-    <button onClick={decrement}>Decrement</button>
-  </div>
-  <div>
-    <Count value={number}/>
-    <button onClick={increment}>Increment</button>
-    <button onClick={decrement}>Decrement</button>
-  </div>
-  <button >Add counter</button>
-</div>
-
+  <script type="text/babel">
+  const CounterApp = () => {
+        const [number, setNumber] = React.useState(0);
+        const increment = () => {
+          setNumber(number + 1);
+        };
+        const decrement = () => {
+          setNumber(number - 1);
+        };
+          return (
+              <div>
+                <h1 >{number}</h1>
+                <button  onClick={increment}>Increment</button>
+                <button  onClick={decrement}>Decrement</button>
+              </div>              
+          );
+      };
+function Li(props) { 
+  return <li style={{listStyle:"none"}}>{props.value}</li>;
+}
+function Li1(props) {
+  const numbers = props.numbers;
+  const li1 = numbers.map((number,i) =>   
+    <Li key={i} value={number} />
   );
-};   
- ReactDOM.render(<CounterApp/>, rootElement);
-
-    </script>
+  return (
+    <ul>
+      {li1}
+    </ul>
+  );
+}
+const Add=()=>{   
+    numbers.push(<CounterApp />);
+    console.log(numbers);
+    ReactDOM.render(
+  <div><Li1 numbers={numbers} /><button onClick={Add}>Add counter</button></div>,
+  document.getElementById('root')
+);
+};
+const numbers = [<CounterApp/>];
+ReactDOM.render(
+  <div><Li1 numbers={numbers} /><button onClick={Add}>Add counter</button></div>,document.getElementById('root')
+);
+  </script>
   </body>
 </html>
