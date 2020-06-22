@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>React Session</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+      const rootElement = document.getElementById("app");
+      const tdTag = ({ children }) => React.createElement("td", {}, children);
+      const thTag = ({ children }) => React.createElement("th", {}, children);
+      const trTag = ({ children }) => React.createElement("tr", {}, children);
+      const tBodyTag = ({ children }) =>
+        React.createElement("tbody", {}, children);
+      const tHeadTag = ({ children }) =>
+        React.createElement("thead", {}, children);
+      const tableTag = ({ children }) =>
+        React.createElement("table", {}, children);
+      const myRow = ({ fn, ln, email }) =>
+        trTag({
+          children: [
+            tdTag({ children: fn }),
+            tdTag({ children: ln }),
+            tdTag({ children: email })
+          ]
+        });
+
+      ReactDOM.render(
+        tableTag({
+          children: [
+            tHeadTag({
+              children: trTag({
+                children: [
+                  thTag({ children: "Firstname" }),
+                  thTag({ children: "Lastname" }),
+                  thTag({ children: "Email" })
+                ]
+              })
+            }),
+            tBodyTag({
+              children: [
+                myRow({ fn: "Yep", ln: "Nope", email: "yo-yo" }),
+                myRow({ fn: "Yep", ln: "Nope", email: "yo-yo" }),
+                myRow({ fn: "Yep", ln: "Nope", email: "yo-yo" }),
+                myRow({ fn: "Yep", ln: "Nope", email: "yo-yo" })
+              ]
+            })
+          ]
+        }),
+        document.getElementById("app")
+      );   
+      console.log(React);
+      console.log(ReactDOM);
+    </script>
+  </body>
+</html>
