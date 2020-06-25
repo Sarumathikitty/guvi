@@ -1,92 +1,65 @@
-import React from "react";
+import React from 'react';
 
-class Tickets extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      ticketlist: [],
-      contactlist: [],
-      agentlist: [],
-    };
-  }
+class Ticket extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            ticketlist: [],
+            contactlist: [],
+            agentlist: []
+        }
+    }
+    componentDidMount() {
+        fetch('http://localhost:4040/tickets')
+            .then(res => res.json())
+            .then(data => {
+                this.setState({ ticketlist: data })
+                return fetch('http://localhost:4040/contacts');
+            })
+            .then(res => res.json())
+            .then(data => {
+                this.setState({ contactlist: data })
+                return fetch('http://localhost:4040/agents');
+            })
+            .then(res => res.json())
+            .then(data => {
+                this.setState({ agentlist: data })
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+    getName = (arr, id) => {
+        let name = arr.find((data) => data.id === id);
+        console.log(arr, id, name);
+        if(name===undefined)return "";
+        return name.name.first + " " + name.name.last
+    }   
 
-  componentDidMount() {
-    fetch("http://localhost:4040/tickets")
-      .then((res) => res.json())
-      .then((data) => {
-        this.setState({ ticketlist: data });
+    render() {        
+        return (
+            <div>
+                <table >
+                    <tr>
+                        <th>Subject</th>
+                        <th>Description</th>
+                        <th>Contact</th>
+                        <th>Agent</th>
+                    </tr>
+                    {this.state.ticketlist.map((ticket, index) => (
 
-        return fetch("http://localhost:4040/contacts");
-      })
-      .then((data) => data.json())
-      .then((data2) => {
-        this.setState({ contactlist: data2 });
-
-        return fetch("http://localhost:4040/agents");
-      })
-      .then((data3) => data3.json())
-      .then((dataa3) => {
-        this.setState({ agentlist: dataa3 });
-      })
-
-      .catch((err) => {
-        console.log(err);
-      });
-  }
-
-  getNames = (agentid) => {
-    const res = this.state.agentlist.reduce((acc, val) => {
-      if (val.id === agentid) return val.name.first;
-      else return acc;
-    }, " ");
-    return res;
-  };
-  getlast = (agentid) => {
-    const res = this.state.agentlist.reduce((acc, val) => {
-      if (val.id === agentid) return val.name.last;
-      else return acc;
-    }, " ");
-    return res;
-  };
-  getnumber = (agentid) => {
-    const res = this.state.agentlist.reduce((acc, val) => {
-      if (val.id === agentid) return val.mobile;
-      else return acc;
-    }, " ");
-    return res;
-  };
-  getemail = (agentid) => {
-    const res = this.state.agentlist.reduce((acc, val) => {
-      if (val.id === agentid) return val.email;
-      else return acc;
-    }, " ");
-    return res;
-  };
-  render() {
-    return (
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Mobile Number</th>
-              <th>Agent Email</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.ticketlist.map((value, index) => (
-              <tr key={index}>
-                <td>{this.getNames(value.agentId)}</td>
-                <td>{this.getlast(value.agentId)}</td>
-                <td>{this.getnumber(value.agentId)}</td>
-                <td>{this.getemail(value.agentId)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    );
-  }
+                        <tr key={index}>
+                            <td> {ticket.subject} </td>
+                            <td> {ticket.description} </td>
+                            <td>{this.getName(this.state.contactlist, ticket.contactId)}</td>
+                            <td>{this.getName(this.state.agentlist, ticket.agentId)}</td>
+                            
+                        </tr>
+                    ))}
+                </table>
+            </div>
+        )
+    }
 }
-export default Tickets;
+
+export default Ticket
