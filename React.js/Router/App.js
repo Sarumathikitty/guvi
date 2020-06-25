@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 import Agent from "./Agent";
+import Contact from "./Contact";
+import Tickets from "./Tickets";
 
 function App() {
   return (
