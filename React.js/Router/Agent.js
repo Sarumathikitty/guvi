@@ -7,7 +7,6 @@ class Agent extends React.Component {
       agentlist: [],
     };
   }
-
   componentDidMount() {
     fetch("http://localhost:4040/agents")
       .then((res) => res.json())
@@ -18,37 +17,23 @@ class Agent extends React.Component {
         console.log(err);
       });
   }
-
   render() {
     return (
-      <div>
-        {/* <ul>
+      <div>        
           {this.state.agentlist.map((agent, index) => (
-            <li key={index}>
-              {agent.name.first} {agent.name.last} {agent.mobile} {agent.email}
-            </li>
-          ))}
-        </ul> */}
-        <table>
-          <thead>
-            <tr>
-              <th>FIrst Name</th>
-              <th>Last Name</th>
-              <th>Mobile Number</th>
-              <th>Agent Email</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.agentlist.map((agent, index) => (
-              <tr key={index}>
-                <td>{agent.name.first}</td>
-                <td>{agent.name.last}</td>
-                <td>{agent.mobile}</td>
-                <td>{agent.email}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+              <table>
+                <tr key={index}>
+                  <th>Name</th>
+                  <th>Mobile number</th>
+                  <th>Email</th>
+                </tr>
+                <tr>
+                  <td>{agent.name.first} {agent.name.last}</td>
+                  <td>{agent.mobile}</td>
+                  <td>{agent.email}</td>
+                </tr>
+              </table>
+          ))}        
       </div>
     );
   }
