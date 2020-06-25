@@ -2,36 +2,24 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 import Agent from "./Agent";
-import Contact from "./Contact";
-import Tickets from "./Tickets";
-
+import Ticket from "./Ticket";
+import Contact from "./Contact"
 function App() {
   return (
     <BrowserRouter>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/agent">Agent</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-            <li>
-              <Link to="/tickets">Tickets</Link>
-            </li>
-          </ul>
-        </nav>
-
+        <table>
+          <tr>
+            <th> <Link to="/agent">Agent</Link></th>
+             <th><Link to="/contact">Contact</Link></th>
+             <th><Link to="/ticket">Ticket</Link></th>
+           </tr>
+        </table>
         <Switch>
           <Route path="/agent" component={Agent} />
-
-          <Route path="/contact">
-            <h1>Contact Component</h1>
-          </Route>
-          <Route path="/tickets">
-            <h1>Tickets Component</h1>
-          </Route>
+          <Route path="/contact" component={Contact} />           
+          <Route path="/ticket" component={Ticket} />     
+        
         </Switch>
       </div>
     </BrowserRouter>
