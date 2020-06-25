@@ -8,13 +8,19 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <table>
-          <tr>
-            <th> <Link to="/agent">Agent</Link></th>
-             <th><Link to="/contact">Contact</Link></th>
-             <th><Link to="/ticket">Ticket</Link></th>
-           </tr>
-        </table>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/agent">Agent</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link to="/ticket">Ticket</Link>
+            </li>
+          </ul>
+        </nav>
         <Switch>
           <Route path="/agent" component={Agent} />
           <Route path="/contact" component={Contact} />           
