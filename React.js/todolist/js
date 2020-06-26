@@ -1,3 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web page</title>
+    <meta charset="UTF-8" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script> 
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+ <style>
+ .apptitle {
+  margin: 1rem 0;
+  color: #ff2968
+}
+.todolist {
+  padding-left: 0;
+  .todoitem {
+    position: relative;
+    margin-bottom: 0.25rem;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    border-top: 1px solid #ccc;    
+    &.done {
+      .form-check-label {
+        color: #999;
+      text-decoration: line-through;
+      }
+    }
+    &.highlight {
+      border-color: #ff2968;
+      background-color: #ff8fb0;      
+      &:last-child {
+        border-color: #ff2968;
+      }
+    }    
+    &:last-child {
+      border-bottom: 1px solid #ccc;
+    }    
+    .btn-danger {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+    }    
+    .form-check-label {
+      width: 100%;
+
+      .form-check-input {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+  <div id="app"></div>
+</div>
+<script type="text/babel">
 class TodoApp extends React.Component {
   constructor(props) {
     super(props);
@@ -126,3 +189,6 @@ class TodoList extends React.Component {
 }
 
 ReactDOM.render(<TodoApp />, document.getElementById("app"));
+</script>
+</body>
+</html>
